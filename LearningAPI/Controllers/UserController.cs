@@ -38,4 +38,44 @@ public class UserController : ControllerBase
 
         return Created(string.Empty, response);
     }
+
+    [HttpPut]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult Update([FromBody] RequestUpdatedUserJson request)
+    {
+        var response = new RequestUpdatedUserJson
+        {
+            Name = "MyName"
+        };
+        return NoContent();
+    }
+
+    [HttpDelete]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult Delete()
+    {
+        return NoContent();
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
+    public IActionResult GelAll()
+    {
+        var response = new List<User>
+        {
+            new User{Id =1, Age =7, Name = "John Doe"},
+            new User{Id =2, Age =9, Name = "Maria"},
+            new User{Id =3, Age =8, Name = "Joana"},
+        };
+        return Ok(response);
+    }
+
+    [HttpPut("change-password")]
+    [ProducesResponseType(typeof(RequestChangePasswordJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult ChangePassword( [FromBody] RequestChangePasswordJson request)
+    {
+        return NoContent();
+    }
+
 }
