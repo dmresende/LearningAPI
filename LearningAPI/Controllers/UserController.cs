@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningAPI.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class UserController : ControllerBase
+
+public class UserController : LearningApiBaseController
 {
     [HttpGet]
     [Route("{id}")]
