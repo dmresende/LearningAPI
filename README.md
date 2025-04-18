@@ -1,28 +1,42 @@
 # Learning .NET API Project
 
-A practical study project focused on reinforcing core concepts of .NET development and REST API design. This project serves as a hands-on exploration of the modern .NET ecosystem.
+Este é um projeto de estudo focado no fortalecimento das bases de desenvolvimento com .NET, ASP.NET Core e APIs REST. Ele foi criado com o objetivo de explorar conceitos fundamentais e boas práticas no ecossistema .NET.
 
-## 🎯 Learning Objectives
+## 🎯 Objetivos de Estudo
 
-- Building RESTful APIs using ASP.NET Core 8
-- Implementing clean API controllers with proper HTTP methods
-- Working with C# 12 features and best practices
-- Understanding API documentation with attributes like `[ProducesResponseType]`
-- Exploring proper HTTP status code usage and response handling
+- Construção de APIs RESTful utilizando ASP.NET Core 8
+- Implementação de controladores com métodos HTTP adequados
+- Uso de C# 12 e suas novas funcionalidades
+- Definição de tipos de resposta e códigos de status HTTP
+- Manipulação de rotas e validação de dados em endpoints
 
-## 🛠 Technologies
+## 🛠 Tecnologias Utilizadas
 
 - .NET 8
 - ASP.NET Core
 - C# 12
-- REST API principles
+- Princípios de APIs REST
 
-## 📚 Project Structure
+## 📚 Funcionalidades Implementadas
 
-The project demonstrates fundamental API concepts through practical examples, including:
-- User management endpoints
-- HTTP method implementations (GET, POST)
-- Response type definitions
-- Route handling
+O projeto inclui os seguintes endpoints no controlador `UserController`:
 
-> This is a learning-focused project aimed at strengthening understanding of the .NET ecosystem through practical implementation.
+- **GET /api/user/{id}**: Retorna um usuário pelo ID.
+- **POST /api/user**: Cria um novo usuário com base nos dados fornecidos.
+- **PUT /api/user**: Atualiza os dados de um usuário existente.
+- **DELETE /api/user**: Remove um usuário.
+- **GET /api/user**: Retorna uma lista de todos os usuários.
+- **PUT /api/user/change-password**: Permite a alteração de senha de um usuário.
+
+## 📂 Estrutura do Projeto
+
+- **Controllers**: Contém os controladores da API, como `UserController` e `DeviceController`.
+- **Comunication**: Define os modelos de requisição e resposta, como `RequestRegisterUserJson` e `ResponseRegisteredUserJson`.
+
+## 🚀 Próximos Passos
+
+- Adicionar validações para os modelos de requisição.
+- Implementar autenticação e autorização.
+- Explorar integração com banco de dados para persistência de dados.
+
+> Este projeto é voltado para aprendizado e prática. Sinta-se à vontade para contribuir ou sugerir melhorias!
